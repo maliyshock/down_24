@@ -1,0 +1,9 @@
+.icon, svg {
+  $c: &;
+  color: var(--indigo);
+  fill: currentColor;
+
+   &--color-accent {
+     fill: var(--accent)
+   }
+}

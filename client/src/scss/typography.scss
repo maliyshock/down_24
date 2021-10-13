@@ -1,0 +1,36 @@
+$fontName: 'roboto';
+$upFolders: '../../../';
+$pathToFonts: '#{$upFolders}assets/fonts/roboto/#{$fontName}';
+
+@include font-face($fontName, $pathToFonts, regular);
+@include font-face($fontName, $pathToFonts, bold);
+
+html {
+  font-size: 14px;
+  font-weight: 400;
+  font-variant: none;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+
+  font-family: $fontName, sans-serif;
+}
+
+.h1 {
+  font-weight: bold;
+  line-height: 100%;
+  font-size: between(72px, 246px, $phone-from, $big-desktop)
+}
+
+.h2 {
+  font-weight: bold;
+  font-size: between(32px, 90px, $phone-from, $big-desktop)
+}
+
+.h4 {
+  font-size: between(18px, 48px, $phone-from, $big-desktop)
+}

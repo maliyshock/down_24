@@ -1,0 +1,33 @@
+.day-section { 
+  $c: &;
+
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: between(16px, 32px, $phone-from, $big-desktop);
+  overflow: auto;
+  justify-content: center;
+  background-color: transparent;
+  padding: 24px 12px;
+
+  width: between(80px, 212px, $phone-from, $big-desktop);
+  font-weight: bold;
+
+  text-align: center;
+
+  font-size: between(16px, 82px, $phone-from, $big-desktop);
+
+  cursor: pointer;
+  
+  transition: background-color $quick-transition-time;
+
+  border-radius: 6px;
+  
+  &:hover, &.active  {
+    background-color: var(--indigoDark);
+  }
+
+  &__icon {
+    width: between(60px, 120px, $phone-from, $big-desktop);
+    height: between(60px, 120px, $phone-from, $big-desktop);
+  }
+}

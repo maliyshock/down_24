@@ -1,0 +1,80 @@
+@mixin reset-ul {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+@mixin resetButton {
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+// grid
+@mixin for-phone-only {
+  @media (max-width: $phone-to) {
+    @content;
+  }
+}
+
+@mixin for-phone-up {
+  @media (min-width: $phone-from) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: $tablet-portrait) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: $tablet-landscape) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: $big-desktop) {
+    @content;
+  }
+}
+
+@mixin wrapper {
+  width: 100%;
+  max-width: $wrapper-width;
+  margin-right: auto;
+  margin-left: auto;
+}

@@ -1,0 +1,69 @@
+.weather-widget {
+  $c: &;
+
+  width: 100%;
+  background-color: var(--bg);
+  color: white;
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: between(12px, 36px, $phone-from, $big-desktop);
+    padding-top: between(12px, 36px, $phone-from, $big-desktop);
+  }
+
+  &__footer {
+    padding-top: between(12px, 36px, $phone-from, $big-desktop);
+  }
+
+  &__column {
+    flex-shrink: 0;
+    flex-grow: 1;
+
+    padding-left: 5%;
+    padding-right: 5%;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      @include for-tablet-landscape-up{
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__header-icon {
+    width: 35%;
+
+    @include for-tablet-landscape-up{
+      width: 25%;
+    }
+  }
+
+  &__temperature-block {
+    width: 50%;
+    text-align: center;
+    @include for-tablet-landscape-up{
+      width: 34.5%;
+    }
+  }
+
+  &__date {
+    width: 100%;
+    padding-top: between(20px, 50px, $phone-from, $big-desktop);
+
+    @include for-tablet-landscape-up{
+      padding-top: 0;
+      width: 40.5%;
+    }
+  }
+
+  &__sub-title {
+    margin-bottom: between(12px, 36px, $phone-from, $big-desktop);
+  }
+}
